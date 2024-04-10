@@ -190,7 +190,24 @@ export default function Header() {
 
       <header className="bg-white shadow">
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
+          <div className="flex divide-x divide-solid divide-slate-300">
+            <div className="text-center flex-auto">
+              <h1 className="text-2xl font-bold tracking-tight text-gray-800">100</h1>
+              <div className="text-sm">Items</div>
+            </div>
+            <div className="text-center flex-auto">
+              <h1 className="text-2xl font-bold tracking-tight text-gray-800">20</h1>
+              <div className="text-sm">Sale</div>
+            </div>
+            <div className="text-center flex-auto">
+              <h1 className="text-2xl font-bold tracking-tight text-gray-800">PHP 4000.00</h1>
+              <div className="text-sm">Lowest</div>
+            </div>
+            <div className="text-center flex-auto">
+              <h1 className="text-2xl font-bold tracking-tight text-gray-800">PHP 35000.00</h1>
+              <div className="text-sm">Highest</div>
+            </div>
+          </div>
         </div>
       </header>
       <main>
