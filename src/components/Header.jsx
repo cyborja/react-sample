@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import { useNavigate, userNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const user = {
   name: 'Tom Cook',
@@ -27,6 +27,7 @@ function classNames(...classes) {
 }
 
 export default function Header() {
+  const location = useLocation();
   const navigate = useNavigate();
   const navigatePage = (e, page) => {
     e.preventDefault();
@@ -55,7 +56,7 @@ export default function Header() {
                           key={item.name}
                           href={item.href}
                           className={classNames(
-                            item.current
+                            location.pathname === '/' + item.href
                               ? 'bg-gray-900 text-white'
                               : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                             'rounded-md px-3 py-2 text-sm font-medium'
